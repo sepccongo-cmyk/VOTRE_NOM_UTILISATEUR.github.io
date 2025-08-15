@@ -1,27 +1,263 @@
-# SEPC – Site GitHub Pages
+[index.html.html](https://github.com/user-attachments/files/21782255/index.html.html)
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEPC – Société d’Électricité, Programmation & Conception</title>
+  <meta name="description" content="SEPC : Électricité, programmation industrielle, conception et intégration à Pointe‑Noire, Congo. FR/EN." />
+  <style>
+    :root{
+      --bg:#0f1115; --panel:#151923; --muted:#8da2b0; --white:#f8fafc;
+      --blue:#1f7bff; --yellow:#FFC107; --radius:16px; --shadow:0 10px 26px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--white);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 
-**Utilisateur GitHub :** `sepccongo-cmyk`  
-**URL du site :** https://sepccongo-cmyk.github.io
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1115 70%,rgba(15,17,21,.6));
+      border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:saturate(160%) blur(6px)}
+    .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0 12px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .bolt{width:40px;height:40px;border-radius:12px;background:radial-gradient(circle at 28% 28%,var(--yellow),#ff8c00);
+      box-shadow:0 0 18px rgba(255,193,7,.55), inset 0 0 10px rgba(0,0,0,.25);position:relative}
+    .bolt:before{content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-12deg);
+      width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:22px solid #111}
+    .bolt:after{content:"";position:absolute;left:50%;top:46%;transform:translate(-50%,-50%) rotate(-12deg);
+      width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:18px solid var(--white)}
+    .logotype{font-weight:800;letter-spacing:.6px;font-size:1.25rem;line-height:1}
+    .brand{background:linear-gradient(90deg,var(--blue),var(--yellow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      text-shadow:0 0 16px rgba(31,123,255,.45),0 0 10px rgba(255,193,7,.35)}
+    nav{display:flex;gap:22px;font-weight:600}
+    nav a{opacity:.9} nav a:hover{opacity:1;color:var(--yellow)}
+    .lang{display:flex;gap:8px;align-items:center}
+    .lang button{background:#0000;border:1px solid rgba(255,255,255,.18);color:var(--white);padding:8px 12px;border-radius:999px;font-weight:700}
+    .lang button.active{background:linear-gradient(90deg,var(--blue),#6aa8ff);border:none}
 
-## Activer GitHub Pages (site utilisateur)
-1. Créer un dépôt **public** nommé **`sepccongo-cmyk.github.io`**.
-2. Uploader tous les fichiers de ce dossier (ou importer le ZIP).
-3. Aller dans **Settings → Pages** : la publication est automatique pour un site utilisateur.
-4. Après ~1 minute, le site est disponible sur **https://sepccongo-cmyk.github.io**.
+    .hero{padding:56px 0 32px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+    h1{font-size:2.4rem;line-height:1.15;margin:0 0 12px;font-weight:800}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:999px;font-weight:700;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(90deg,var(--blue),#6aa8ff);color:#fff;border:none}
+    .btn.ghost{background:transparent;color:#fff}
 
-## Formulaire (Formspree)
-1. Crée un endpoint sur https://formspree.io (login avec `sepccongo@gmail.com`).
-2. Remplace `YOUR_FORM_ID` dans `index.html` par l’identifiant fourni (ex: `xayzzkny`).
-3. Enregistre ; tu recevras les messages sur `sepccongo@gmail.com`.
+    section{padding:26px 0}
+    h2{margin:0 0 12px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(31,123,255,.15);border:1px solid rgba(31,123,255,.35);font-size:.78rem;color:#cfe0ff;font-weight:700}
+    ul{margin:8px 0 0;padding:0 0 0 18px;color:#cfd7df}
 
-## Modifier la langue et le thème
-- Le bouton **FR/EN** change la langue (mémorisée dans le navigateur).
-- Le bouton **☾ / ☀** bascule le thème sombre/clair.
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .map{height:220px;border-radius:14px;background:linear-gradient(45deg,#0b1220,#10213a);display:flex;align-items:center;justify-content:center;color:#89a3b8;border:1px dashed rgba(255,255,255,.14)}
 
-## Fichiers clés
-- `index.html` – page principale (FR/EN + thème)
-- `assets/logo-horizontal.svg` – logo principal
-- `assets/logo-compact.svg` – pictogramme
-- `assets/favicon.svg` – favicon
-- `SEPC_Brochure_FR_EN.pdf` – brochure bilingue (si fournie)
-- `404.html` – page d’erreur GitHub Pages
+    footer{margin-top:20px;border-top:1px solid rgba(255,255,255,.06);color:#a8b5c3}
+    .foot{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:16px 0;font-size:.9rem}
+    .foot a{color:#cfe0ff;text-decoration:underline}
+
+    form{display:grid;gap:10px}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0e121a;color:var(--white)}
+    textarea{min-height:120px;resize:vertical}
+
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      h1{font-size:2rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a href="#" class="logo" aria-label="SEPC Accueil">
+        <span class="bolt" aria-hidden="true"></span>
+        <div>
+          <div class="logotype">SEPC <span class="brand">• <span data-i18n="taglineShort">Électricité & Code</span></span></div>
+          <span class="tag" style="display:block;font-weight:600;font-size:.72rem;color:#8da2b0" data-i18n="subtitle">
+            Société d’Électricité, Programmation & Conception
+          </span>
+        </div>
+      </a>
+      <nav>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="lang">
+        <button id="btn-fr" class="active" aria-label="Français">FR</button>
+        <button id="btn-en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap grid">
+        <div>
+          <h1 data-i18n="heroTitle">Énergie maîtrisée, systèmes intelligents.<br/>Nous concevons, programmons et intégrons.</h1>
+          <p class="lead" data-i18n="heroLead">
+            SEPC accompagne l’industrie et le tertiaire à Pointe‑Noire et partout au Congo : études électriques, automatisme (PLC),
+            IoT, supervision (SCADA) et mise en service.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#contact" data-i18n="ctaQuote">Demander un devis</a>
+            <a class="btn ghost" href="#services" data-i18n="ctaServices">Voir nos services</a>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <span class="pill" data-i18n="badgeNew">Nouveau • Pack mise en service</span>
+            <h3 data-i18n="panelTitle">Du schéma au code, jusqu’au test sur site</h3>
+            <ul>
+              <li data-i18n="li1">Schémas électriques normalisés (EPLAN/SEE Electrical)</li>
+              <li data-i18n="li2">Programmation d’automates (Siemens, Schneider, Omron)</li>
+              <li data-i18n="li3">SCADA, IoT & télémesure – intégration sécurisée</li>
+              <li data-i18n="li4">Câblage, essais, formation et documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2 data-i18n="servicesTitle">Nos services</h2>
+        <div class="cards" aria-label="Liste des services SEPC">
+          <article class="card">
+            <span class="pill" data-i18n="pillDesign">Conception</span>
+            <h3 data-i18n="srv1Title">Études & schémas électriques</h3>
+            <p data-i18n="srv1Text">Bilans de puissance, protections, plans d’implantation et dossiers d’exécution.</p>
+          </article>
+          <article class="card">
+            <span class="pill" data-i18n="pillProg">Programmation</span>
+            <h3 data-i18n="srv2Title">Automatisme & systèmes embarqués</h3>
+            <p data-i18n="srv2Text">PLC, HMI, IoT, protocoles (Modbus, Profibus, Profinet), tests et validation.</p>
+          </article>
+          <article class="card">
+            <span class="pill" data-i18n="pillInt">Intégration</span>
+            <h3 data-i18n="srv3Title">Mise en service & maintenance</h3>
+            <p data-i18n="srv3Text">Coffrets, câblage, FAT/SAT, maintenance et optimisation énergétique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <h2 data-i18n="expertiseTitle">Domaines d’expertise</h2>
+        <div class="cards">
+          <div class="card"><h3 data-i18n="exp1Title">Industrie & process</h3><p data-i18n="exp1Text">Automatisation de lignes, instrumentation, retrofit.</p></div>
+          <div class="card"><h3 data-i18n="exp2Title">Bâtiments intelligents</h3><p data-i18n="exp2Text">GTB/GTC, domotique, efficacité énergétique, supervision.</p></div>
+          <div class="card"><h3 data-i18n="exp3Title">Énergies & utilités</h3><p data-i18n="exp3Text">Distribution BT/MT, groupes, onduleurs, monitoring.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 data-i18n="contactTitle">Contact</h2>
+        <div class="contact">
+          <div class="panel">
+            <form action="mailto:sepccongo@gmail.com" method="post" enctype="text/plain">
+              <label>
+                <span data-i18n="formName">Nom</span><br/>
+                <input type="text" name="Nom" required placeholder="Votre nom" />
+              </label>
+              <label>
+                <span data-i18n="formEmail">Email</span><br/>
+                <input type="email" name="Email" required placeholder="votre@email.com" />
+              </label>
+              <label>
+                <span data-i18n="formMsg">Message</span><br/>
+                <textarea name="Message" required placeholder="Décrivez votre besoin..."></textarea>
+              </label>
+              <button class="btn primary" type="submit" data-i18n="formSend">Envoyer</button>
+            </form>
+          </div>
+          <div class="panel">
+            <h3>SEPC</h3>
+            <p><strong data-i18n="addr">Adresse :</strong> Pointe‑Noire, Congo</p>
+            <p><strong data-i18n="phone">Téléphone :</strong> <a href="tel:+242053236578">05 323 65 78</a></p>
+            <p><strong>Email :</strong> <a href="mailto:sepccongo@gmail.com">sepccongo@gmail.com</a></p>
+            <div class="map" aria-label="Carte de Pointe-Noire" data-i18n="map">Carte/plan – Pointe‑Noire, Congo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <small>© 2025 SEPC</small>
+      <small><a href="mailto:sepccongo@gmail.com">sepccongo@gmail.com</a></small>
+    </div>
+  </footer>
+
+  <script>
+    const dict = {
+      fr: {
+        taglineShort: "Électricité & Code",
+        subtitle: "Société d’Électricité, Programmation & Conception",
+        navServices: "Services", navExpertise: "Expertise", navContact: "Contact",
+        heroTitle: "Énergie maîtrisée, systèmes intelligents.<br/>Nous concevons, programmons et intégrons.",
+        heroLead: "SEPC accompagne l’industrie et le tertiaire à Pointe‑Noire et partout au Congo : études électriques, automatisme (PLC), IoT, supervision (SCADA) et mise en service.",
+        ctaQuote: "Demander un devis", ctaServices: "Voir nos services",
+        badgeNew: "Nouveau • Pack mise en service", panelTitle: "Du schéma au code, jusqu’au test sur site",
+        li1: "Schémas électriques normalisés (EPLAN/SEE Electrical)", li2: "Programmation d’automates (Siemens, Schneider, Omron)",
+        li3: "SCADA, IoT & télémesure – intégration sécurisée", li4: "Câblage, essais, formation et documentation",
+        servicesTitle: "Nos services", pillDesign:"Conception", pillProg:"Programmation", pillInt:"Intégration",
+        srv1Title:"Études & schémas électriques", srv1Text:"Bilans de puissance, protections, plans d’implantation et dossiers d’exécution.",
+        srv2Title:"Automatisme & systèmes embarqués", srv2Text:"PLC, HMI, IoT, protocoles (Modbus, Profibus, Profinet), tests et validation.",
+        srv3Title:"Mise en service & maintenance", srv3Text:"Coffrets, câblage, FAT/SAT, maintenance et optimisation énergétique.",
+        expertiseTitle:"Domaines d’expertise", exp1Title:"Industrie & process", exp1Text:"Automatisation de lignes, instrumentation, retrofit.",
+        exp2Title:"Bâtiments intelligents", exp2Text:"GTB/GTC, domotique, efficacité énergétique, supervision.",
+        exp3Title:"Énergies & utilités", exp3Text:"Distribution BT/MT, groupes, onduleurs, monitoring.",
+        contactTitle:"Contact", formName:"Nom", formEmail:"Email", formMsg:"Message", formSend:"Envoyer",
+        addr:"Adresse :", phone:"Téléphone :", map:"Carte/plan – Pointe‑Noire, Congo"
+      },
+      en: {
+        taglineShort: "Electricity & Code",
+        subtitle: "Electrical, Programming & Design Company",
+        navServices: "Services", navExpertise: "Expertise", navContact: "Contact",
+        heroTitle: "Controlled energy, smart systems.<br/>We design, program and integrate.",
+        heroLead: "SEPC supports industry and commercial buildings in Pointe‑Noire and across Congo: electrical design, PLC automation, IoT, SCADA and commissioning.",
+        ctaQuote: "Request a quote", ctaServices: "See our services",
+        badgeNew: "New • Commissioning Pack", panelTitle: "From schematics to code, through on‑site testing",
+        li1: "Standard-compliant wiring diagrams (EPLAN/SEE Electrical)", li2: "PLC programming (Siemens, Schneider, Omron)",
+        li3: "SCADA, IoT & telemetry – secure integration", li4: "Wiring, testing, training and documentation",
+        servicesTitle: "Our Services", pillDesign:"Design", pillProg:"Programming", pillInt:"Integration",
+        srv1Title:"Electrical studies & schematics", srv1Text:"Load calculations, protection selection, layout plans and as‑built files.",
+        srv2Title:"Automation & embedded systems", srv2Text:"PLC, HMI, IoT, protocols (Modbus, Profibus, Profinet), tests and validation.",
+        srv3Title:"Commissioning & maintenance", srv3Text:"Enclosures, wiring, FAT/SAT, maintenance and energy optimization.",
+        expertiseTitle:"Areas of Expertise", exp1Title:"Industry & processes", exp1Text:"Line automation, instrumentation, retrofits.",
+        exp2Title:"Smart buildings", exp2Text:"BMS, home automation, energy efficiency and supervision.",
+        exp3Title:"Energy & utilities", exp3Text:"LV/MV distribution, gensets, UPS, monitoring.",
+        contactTitle:"Contact", formName:"Name", formEmail:"Email", formMsg:"Message", formSend:"Send",
+        addr:"Address:", phone:"Phone:", map:"Map/plan – Pointe‑Noire, Congo"
+      }
+    };
+
+    function setLang(lang){
+      const t = dict[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(t[key]) el.innerHTML = t[key];
+      });
+      document.getElementById("btn-fr").classList.toggle("active", lang==="fr");
+      document.getElementById("btn-en").classList.toggle("active", lang==="en");
+      document.documentElement.lang = lang;
+      localStorage.setItem("sepc_lang", lang);
+    }
+    document.getElementById("btn-fr").addEventListener("click",()=>setLang("fr"));
+    document.getElementById("btn-en").addEventListener("click",()=>setLang("en"));
+    setLang(localStorage.getItem("sepc_lang")||"fr");
+  </script>
+</body>
+</html>
