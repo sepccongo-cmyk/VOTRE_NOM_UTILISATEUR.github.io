@@ -1,0 +1,15 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f7bff"/>
+      <stop offset="1" stop-color="#FFC107"/>
+    </linearGradient>
+  </defs>
+  <rect rx="28" ry="28" x="8" y="8" width="240" height="240" fill="url(#g)"/>
+  <g fill="#0f1115">
+    <path d="M118 62l-22 52h30l-16 48 54-62h-32l16-38z" opacity=".95"/>
+    <circle cx="188" cy="88" r="6"/><circle cx="202" cy="112" r="6"/><circle cx="170" cy="128" r="6"/>
+    <path d="M188 88l14 24-32 16" stroke="#0f1115" stroke-width="4" fill="none"/>
+  </g>
+  <text x="24" y="226" font-family="Inter,Segoe UI,Arial" font-size="40" font-weight="800" fill="#0f1115">SEPC</text>
+</svg>
